@@ -38,19 +38,6 @@ src/
     └── Main.java
 ```
 
----
-
-## Exemplo de uso
-
-```java
-Acesse o menu e digite a opção desejada, assim realizando
-a operação descrita:
-
-1;Ver saldo
-2.Sacar 
-3.Depositar
-0.Sair
-```
 
 ---
 
