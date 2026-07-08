@@ -29,9 +29,12 @@ O foco não foi construir um sistema completo, mas aplicar de forma deliberada o
 
 ```
 src/
-└── ExerciciosProprios/
+└── domain/
     ├── InterfaceContaBancaria.java
     ├── ContaBancaria.java
+└── domain/
+    ├── Menu.java
+└── test/
     └── ExercicioBanco.java
 ```
 
@@ -40,15 +43,7 @@ src/
 ## Exemplo de uso
 
 ```java
-ContaBancaria cb = new ContaBancaria("Rodrigo");
-
-cb.depositar(500);   // saldo: 500.0
-cb.sacar(200);       // saldo: 300.0
-cb.exibirSaldo();    // Saldo atual: 300.0
-
-cb.sacar(400);       // Saldo insuficiente.
-cb.depositar(-50);   // Não é possível depositar este valor.
-```
+Funcionalidades ainda em construção
 
 ---
 
