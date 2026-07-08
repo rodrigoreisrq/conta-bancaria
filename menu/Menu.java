@@ -8,6 +8,7 @@ public class Menu {
         System.out.println("1. Ver saldo");
         System.out.println("2. Sacar");
         System.out.println("3. Depositar");
+        System.out.println("0. Sair");
     }
 
 }

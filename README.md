@@ -30,20 +30,14 @@ O foco não foi construir um sistema completo, mas aplicar de forma deliberada o
 ```
 src/
 └── domain/
-    ├── InterfaceContaBancaria.java
-    ├── ContaBancaria.java
-└── domain/
-    ├── Menu.java
+|    ├── InterfaceContaBancaria.java
+|    ├── ContaBancaria.java
+└── menu/
+|    └── Menu.java
 └── test/
-    └── ExercicioBanco.java
+    └── Main.java
 ```
 
----
-
-## Exemplo de uso
-
-```java
-Funcionalidades ainda em construção
 
 ---
 
