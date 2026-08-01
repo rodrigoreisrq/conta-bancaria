@@ -1,5 +1,9 @@
 package ExerciciosProprios.src.src.domain;
 
+import ExerciciosProprios.src.src.exceptions.SaldoInsuficienteException;
+
+import java.io.IOException;
+
 public class ContaBancaria implements InterfaceContaBancaria {
     private String titular;
     private double saldo;
@@ -28,12 +32,18 @@ public class ContaBancaria implements InterfaceContaBancaria {
 
 
     @Override
-    public void sacar(double valor) {
-        if(valor > this.saldo){
-            System.out.println("Saldo insuficiente.");
-        }else if(valor <= this.saldo) {
-            this.setSaldo(this.getSaldo() - valor);
+    public void sacar(double valor) throws IOException, SaldoInsuficienteException {
+        if(valor < 0){
+            throw new IOException("Não é possivel sacar um valor negativo");
+        } else{
+            if(valor > this.saldo){
+//                throw new IOException("Saldo insuficiente.");
+                throw new SaldoInsuficienteException();
+            }else if(valor <= this.saldo) {
+                this.setSaldo(this.getSaldo() - valor);
+            }
         }
+
     }
 
     @Override

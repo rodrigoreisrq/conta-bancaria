@@ -1,12 +1,14 @@
 package ExerciciosProprios.src.src.test;
 
 import ExerciciosProprios.src.src.domain.ContaBancaria;
+import ExerciciosProprios.src.src.exceptions.SaldoInsuficienteException;
 import ExerciciosProprios.src.src.menu.Menu;
 
+import java.io.IOException;
 import java.util.Scanner;
 
 public class Main {
-    public static void main(String[] args) {
+    public static void main(String[] args) throws IOException, SaldoInsuficienteException {
         ContaBancaria conta = new ContaBancaria("Rodrigo");
         Scanner input = new Scanner(System.in);
         Menu menu = new Menu();
@@ -21,7 +23,12 @@ public class Main {
                 case 2:
                     System.out.println("Digite o valor do saque: ");
                     double saque = input.nextDouble();
-                    conta.sacar(saque);
+                    try{
+                        conta.sacar(saque);
+                    }catch(SaldoInsuficienteException e){
+                        e.printStackTrace();
+
+                    }
                     break;
                 case 3:
                     System.out.println("Digite o valor do depósito: ");
